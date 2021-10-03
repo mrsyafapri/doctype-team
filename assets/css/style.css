@@ -1,0 +1,505 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:wght@500&display=swap');
+
+:root {
+    --primary-color: #003350;
+    --secondary-color: #4cb5cf;
+    --white-color: #ffffff;
+    --open-sans: 'Open Sans', sans-serif;
+    --poppins: 'Poppins', sans-serif;
+}
+
+.slogan {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.title {
+    font-size: 2rem;
+}
+
+.sub-title {
+    font-size: 1.8rem;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+    margin: 0 10px;
+}
+
+/* galerry start */
+section#galeri {
+    padding: 25px;
+}
+
+div.gallery {
+    margin: 10px;
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px rgba(185, 185, 185, 0.541);
+}
+
+div.gallery:hover {
+    border: 1px solid rgb(201, 201, 201);
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+    transition: transform .5s ease;
+}
+
+div.gallery img:hover {
+    transform: scale(1.5);
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+    color: var(--white-color);
+}
+
+.responsive {
+    float: left;
+    width: 25%;
+}
+
+@media only screen and (max-width: 980px) {
+    .responsive {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Galerri end */
+
+a {
+    text-decoration: none;
+}
+
+.link-contact {
+    font-size: 20px;
+    color: black;
+}
+
+.img-contact {
+    width: 25px;
+    height: auto;
+}
+
+.bg-profil {
+    background-color: var(--secondary-color);
+    padding: 20px 25px 30px 25px;
+}
+
+.bg-profil h1 {
+    color: var(--primary-color);
+}
+
+.bg-contact {
+    background-color: var(--secondary-color);
+    padding: 30px 25px 25px 25px;
+    margin-top: -20px;
+    color: var(--primary-color);
+}
+
+/* Float four columns side by side */
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {
+    margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 700px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+.container-ms {
+    display: grid;
+    padding: 20px;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.container-ms>div>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-center {
+    text-align: center !important
+}
+
+* {
+    box-sizing: border-box;
+    overflow-x: clip;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--open-sans);
+    margin: 0;
+    padding: 0;
+    background-color: var(--white-color);
+}
+
+header {
+    display: inline;
+}
+
+.brand a {
+    font-family: var(--poppins);
+    font-size: 23px;
+    align-items: center;
+}
+
+.jumbotron {
+    font-size: 1.8rem;
+    padding: 8% 5%;
+    background-image: url("../img/header.jpg");
+    background-position: center;
+    background-color: var(--secondary-color);
+    background-size: cover;
+    text-align: center;
+    color: white;
+    animation: bounce 1.5s ease-out;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    25% {
+        transform: translateY(0%);
+    }
+
+    50% {
+        transform: translateY(-50%);
+    }
+
+    75% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.jumbotron>.slogan {
+    font-size: 1rem;
+}
+
+.jumbotron h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.jumbotron p {
+    font-size: 1.5rem;
+}
+
+/* START:Navbar */
+nav {
+    display: flex;
+    background-color: var(--primary-color);
+    justify-content: space-around;
+    color: white;
+    height: 50px;
+    align-items: center;
+    top: 0;
+    position: sticky;
+    opacity: 0.85;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+nav a:hover {
+    font-weight: bold;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -6px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+/* Hamburger Menu Animation*/
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked~span:nth-child(2) {
+    background-color: white;
+    transform: rotate(45deg) translate(-1.8px, -1.8px);
+}
+
+.menu-toggle input:checked~span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.menu-toggle input:checked~span:nth-child(4) {
+    background-color: white;
+    transform: rotate(-45deg);
+}
+
+/* END:Navbar */
+
+footer {
+    padding: 5px;
+    color: whitesmoke;
+    background-color: var(--primary-color);
+    text-align: center;
+    font-weight: bold;
+}
+
+.lesson-wrapper {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.lesson-wrapper h1 {
+    color: var(--primary-color)
+}
+
+.lesson {
+    float: left;
+    width: 25%;
+    padding: 0px 10px 0px 10px;
+}
+
+.text-contents {
+    width: 100%;
+    font-size: 15px;
+    color: var(--primary-color);
+}
+
+.lesson-icon1 {
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 80px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(66, 64, 64, 0.541);
+
+}
+
+.lesson-icon2 {
+    background-color: var(--secondary-color);
+    width: 100%;
+    height: 80px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(66, 64, 64, 0.541);
+
+}
+
+.lesson-icon1 p,
+.lesson-icon2 p {
+    top: 20%;
+    width: 100%;
+    color: white;
+    font-weight: bolder;
+    padding: 25px 0;
+}
+
+.container {
+    max-width: 1170px;
+    width: 100%;
+    padding: 0 0px;
+    margin: 0 auto;
+    margin-top: 30px;
+    display: -webkit-inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.grid-container {
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    padding: 20px 150px 20px 150px;
+    width: 100%;
+    background-color: var(--white-color);
+}
+
+.grid-item {
+    padding: 20px;
+    font-size: 30px;
+}
+
+.grid-item img {
+    width: 500px;
+    right: 0;
+}
+
+.grid-item h3 {
+    color: var(--primary-color);
+    left: 0;
+    font-size: 1.8rem;
+}
+
+.grid-item p {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* Responsive Breakpoint */
+/* Ukuran Mobile dan Tablet */
+@media screen and (max-width: 940px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 34px;
+        width: 70%;
+        height: 100vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--primary-color);
+        transform: translateX(100%);
+        transition: all 0.8s;
+        opacity: 0;
+        border: 1px black;
+    }
+
+    nav ul.slide {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+
+    .lesson {
+        width: 50%;
+        margin-bottom: 50px;
+    }
+
+    .text-contents {
+        width: 100%;
+        font-size: 12px;
+        color: #b3aeb5;
+    }
+
+    .grid-container {
+        display: inline-grid;
+        grid-template-columns: auto;
+        padding: 20px;
+        width: 100%;
+        align-content: center;
+    }
+
+    .grid-item img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .jumbotron>.slogan {
+        font-size: 0.8rem;
+    }
+
+    .jumbotron h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+
+    .jumbotron p {
+        font-size: 1rem;
+    }
+
+    .title {
+        font-size: 1.2rem;
+    }
+
+    .lesson-icon1 p,
+    .lesson-icon2 p {
+        top: 20%;
+        width: 100%;
+        font-size: 0.8rem;
+        color: white;
+        font-weight: 600;
+        padding: 25px 0;
+    }
+}
