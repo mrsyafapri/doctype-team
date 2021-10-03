@@ -28,7 +28,7 @@
     margin: 0 10px;
 }
 
-/* galerry start */
+/* START:Galerry */
 section#galeri {
     padding: 25px;
 }
@@ -65,25 +65,13 @@ div.desc {
     width: 25%;
 }
 
-@media only screen and (max-width: 980px) {
-    .responsive {
-        width: 50%;
-    }
-}
-
-@media only screen and (max-width: 680px) {
-    .responsive {
-        width: 100%;
-    }
-}
-
 .clearfix:after {
     content: "";
     display: table;
     clear: both;
 }
 
-/* Galerri end */
+/* END:Galerry */
 
 a {
     text-decoration: none;
@@ -115,34 +103,6 @@ a {
     color: var(--primary-color);
 }
 
-/* Float four columns side by side */
-.column {
-    float: left;
-    width: 25%;
-    padding: 0 10px;
-}
-
-/* Remove extra left and right margins, due to padding */
-.row {
-    margin: 0 -5px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Responsive columns */
-@media screen and (max-width: 700px) {
-    .column {
-        width: 100%;
-        display: block;
-        margin-bottom: 20px;
-    }
-}
-
 .container-ms {
     display: grid;
     padding: 20px;
@@ -158,6 +118,10 @@ a {
 
 .text-center {
     text-align: center !important
+}
+
+.text-contact {
+    font-size: 1.1rem;
 }
 
 * {
@@ -449,12 +413,6 @@ footer {
         margin-bottom: 50px;
     }
 
-    .text-contents {
-        width: 100%;
-        font-size: 12px;
-        color: #b3aeb5;
-    }
-
     .grid-container {
         display: inline-grid;
         grid-template-columns: auto;
@@ -476,23 +434,6 @@ footer {
         height: auto;
     }
 
-    .jumbotron>.slogan {
-        font-size: 0.8rem;
-    }
-
-    .jumbotron h1 {
-        font-size: 2.5rem;
-        font-weight: 600;
-    }
-
-    .jumbotron p {
-        font-size: 1rem;
-    }
-
-    .title {
-        font-size: 1.2rem;
-    }
-
     .lesson-icon1 p,
     .lesson-icon2 p {
         top: 20%;
@@ -501,5 +442,17 @@ footer {
         color: white;
         font-weight: 600;
         padding: 25px 0;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    .responsive {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .responsive {
+        width: 100%;
     }
 }
